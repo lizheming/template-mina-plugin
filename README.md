@@ -1,6 +1,6 @@
-# mina-plugin
+# template-mina-plugin
 
-> Mina Plugin Scaffold template for Tina.js
+> MiniProgram Plugin Scaffold template for Tina.js
 
 ## Usage
 
@@ -21,7 +21,7 @@ sao mina-plugin my-project
 ### From git
 
 ```bash
-sao lizheming/mina-plugin my-project
+sao lizheming/template-mina-plugin my-project
 ```
 
 ## License
