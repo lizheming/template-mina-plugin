@@ -1,6 +1,10 @@
 # template-mina-plugin
 
-> MiniProgram Plugin Scaffold template for Tina.js
+[![license](https://img.shields.io/github/license/lizheming/template-mina-plugin.svg?style=flat-square)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/template-mina-plugin.svg?style=flat-square)](https://www.npmjs.com/package/template-tina)
+[![SAO](https://img.shields.io/badge/⚔️%20SAO-mina--plugin-ff69b4.svg?style=flat-square)](https://sao.js.org/)
+
+MiniProgram Plugin Scaffold template for Tina.js
 
 ## Usage
 
