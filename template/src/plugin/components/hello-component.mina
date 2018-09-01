@@ -1,0 +1,45 @@
+<config>
+{
+  "component": true,
+  "usingComponents": {}
+}
+</config>
+
+<template>
+  <view class="container">
+    <text class="item" wx:key="{{ items }}" wx:for="{{ items }}">{{ item }}</text>
+  </view>
+</template>
+
+<script>
+import { Component } from '@tinajs/tina';
+
+Component.define({
+  properties: {
+    items: {
+      type: Array,
+      value: [],
+      observer: function (newVal, oldVal, changedPath) {
+        this.setData({ items: newVal });
+      }
+    }
+  },
+
+  data: {
+    items: []
+  },
+
+  methods: {
+
+  }
+})
+</script>
+
+<style>
+.container {
+  margin: 1em;
+}
+.item {
+  display: block;
+}
+</style>

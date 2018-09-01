@@ -1,0 +1,54 @@
+<config>
+{
+  "usingComponents": {
+    "hello-list": "plugin://hello-plugin/hello-component"
+  }
+}
+</config>
+
+<template>
+  <navigator id="nav" url="plugin://hello-plugin/hello-page">
+    Go to Plugin page
+  </navigator>
+
+  <button id="add" bindtap="addItem">Add item</button>
+
+  <hello-list items="{{ items }}" />
+</template>
+
+<script>
+  import { Page } from '@tinajs/tina';
+
+  const plugin = requirePlugin("hello-plugin");
+  Page.define({
+    data: {
+      items: [],
+      currentItem: 0
+    },
+    onLoad: function () {
+      plugin.sayHello();
+      var world = plugin.answer;
+    },
+    addItem: function () {
+      this.data.items.push(this.data.currentItem++);
+      this.setData({
+        items: this.data.items,
+        currentItem: this.data.currentItem
+      });
+    }
+  });
+</script>
+
+<style>
+#nav {
+  text-align: center;
+  background: #eeeeee;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+#add {
+  margin: 1em;
+}
+</style>

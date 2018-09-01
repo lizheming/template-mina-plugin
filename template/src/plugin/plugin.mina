@@ -1,0 +1,11 @@
+<config>
+{
+  "publicComponents": {
+    "hello-component": "components/hello-component.mina"
+  },
+  "pages": {
+    "hello-page": "pages/hello-page.mina"
+  },
+  "main": "index.js"
+}
+</config>

@@ -1,0 +1,21 @@
+<config>
+{
+  "pages": [
+    "pages/index.mina"
+  ],
+  "plugins": {
+    "hello-plugin": {
+      "version": "dev",
+      "provider": ""
+    }
+  }
+}
+</config>
+
+<script>
+App({
+  onLaunch() {
+
+  }
+})
+</script>
