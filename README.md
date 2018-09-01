@@ -28,6 +28,8 @@ sao mina-plugin my-project
 sao lizheming/template-mina-plugin my-project
 ```
 
+After sao initial, you should change `src/miniprogram/app.mina` file `provider` property same as `project.config.json` file `appid` property.
+
 ## License
 
 MIT &copy; [lizheming](github.com/lizheming)
