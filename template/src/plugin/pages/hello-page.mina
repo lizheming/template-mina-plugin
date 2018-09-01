@@ -13,10 +13,8 @@ import { Page } from '@tinajs/tina'
 
 Page.define({
   data: {},
-  method: {
-    load() {
-      console.log('This is a plugin page!')
-    }
+  onLoad() {
+    console.log('This is a plugin page!')
   }
 })
 </script>

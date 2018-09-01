@@ -19,8 +19,8 @@ Component.define({
     items: {
       type: Array,
       value: [],
-      observer: function (newVal, oldVal, changedPath) {
-        this.setData({ items: newVal });
+      observer(newVal, oldVal, changedPath) {
+        this.setData({ items: newVal })
       }
     }
   },
