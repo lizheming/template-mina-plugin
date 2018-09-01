@@ -1,3 +1,29 @@
 # mina-plugin
 
-Tina.js 小程序插件脚手架
+> Mina Plugin Scaffold template for Tina.js
+
+## Usage
+
+Install [SAO](https://github.com/egoist/sao) first.
+
+```bash
+yarn global add sao
+# or
+npm i -g sao
+```
+
+### From npm
+
+```bash
+sao mina-plugin my-project
+```
+
+### From git
+
+```bash
+sao lizheming/mina-plugin my-project
+```
+
+## License
+
+MIT &copy; [lizheming](github.com/lizheming)

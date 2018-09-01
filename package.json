@@ -1,0 +1,25 @@
+{
+  "name": "mina-plugin",
+  "version": "0.0.0",
+  "description": "Mina Plugin Scaffold template for Tina.js",
+  "repository": {
+    "url": "lizheming/mina-plugin",
+    "type": "git"
+  },
+  "author": "lizheming <secretlzm007@gmail.com> (github.com/lizheming)",
+  "license": "MIT",
+  "files": [
+    "sao.js",
+    "template"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "superb": "^1.3.0"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "sao": "^0.22.1"
+  }
+}
