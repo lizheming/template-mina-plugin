@@ -1,6 +1,6 @@
 {
   "name": "mina-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Mina Plugin Scaffold template for Tina.js",
   "repository": {
     "url": "lizheming/mina-plugin",
