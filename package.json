@@ -1,12 +1,12 @@
 {
-  "name": "mina-plugin",
-  "version": "0.0.1",
+  "name": "template-mina-plugin",
+  "version": "0.1.0",
   "description": "Mina Plugin Scaffold template for Tina.js",
   "repository": {
-    "url": "lizheming/mina-plugin",
+    "url": "https://github.com/lizheming/template-mina-plugin.git",
     "type": "git"
   },
-  "author": "lizheming <secretlzm007@gmail.com> (github.com/lizheming)",
+  "author": "lizheming <secretlzm007@gmail.com> (https://github.com/lizheming)",
   "license": "MIT",
   "files": [
     "sao.js",
