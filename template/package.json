@@ -5,6 +5,7 @@
   "description": "<%= description %>",
   "author": "<%= username %>",
   "scripts": {
+    "precommit": "lint-staged",
     "clean": "rimraf './dist/!(app.json|project.config.json)**'",
     "prestart": "run-s clean",
     "prebuild": "run-s clean",
@@ -17,9 +18,9 @@
     "wxio": "^0.1.0"
   },
   "devDependencies": {
-    "@tinajs/mina-entry-webpack-plugin": "^0.6.2",
-    "@tinajs/mina-loader": "^0.6.0",
-    "@tinajs/mina-runtime-webpack-plugin": "^0.1.4",
+    "@tinajs/mina-entry-webpack-plugin": "^1.0.0-0",
+    "@tinajs/mina-loader": "^1.0.0-0",
+    "@tinajs/mina-runtime-webpack-plugin": "^1.0.0-0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -38,6 +39,7 @@
     "webpack-cli": "^3.1.0",
     "wxml-loader": "^0.2.1",
     "lint-staged": "^7.2.0",
-    "prettiter": "^1.13.7"
+    "prettier": "^1.13.7",
+    "husky": "^0.14.3"
   }
 }
