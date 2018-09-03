@@ -34,8 +34,10 @@
     "precss": "^2.0.0",
     "relative-file-loader": "^1.1.12",
     "rimraf": "^2.6.2",
-    "uglifyjs-webpack-plugin": "^1.1.2",
-    "webpack": "^3.8.1",
-    "wxml-loader": "^0.2.1"
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.1.0",
+    "wxml-loader": "^0.2.1",
+    "lint-staged": "^7.2.0",
+    "prettiter": "^1.13.7"
   }
 }

@@ -2,7 +2,6 @@ import webpack from 'webpack'
 import { resolve, dirname, basename } from 'path'
 import MinaEntryPlugin from '@tinajs/mina-entry-webpack-plugin'
 import MinaRuntimePlugin from '@tinajs/mina-runtime-webpack-plugin'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -32,7 +31,8 @@ export default [
     output: {
       path: dist,
       filename: '[name]',
-      publicPath: '/'
+      publicPath: '/',
+      globalObject: 'wx'
     },
     module: {
       rules: [
@@ -70,6 +70,15 @@ export default [
             },
           },
         },
+        {
+          test: /\.wxs$/,
+          use: {
+            loader: "file-loader",
+            options: {
+              name: "wxs/[name].[hash:6].[ext]"
+            }
+          },
+        },
       ],
     },
     resolve: {
@@ -80,15 +89,24 @@ export default [
         NODE_ENV: 'development',
         DEBUG: false,
       }),
-      new MinaEntryPlugin(),
-      new MinaRuntimePlugin({
-        runtime: './common.js',
+      new MinaEntryPlugin({
+        map: entry => ['es6-promise/dist/es6-promise.auto.js', entry],
       }),
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: 'common.js',
-      //   minChunks: 2,
-      // }),
-      isProduction && new UglifyJsPlugin(),
-    ].filter(Boolean),
+      new MinaRuntimePlugin({
+        runtime: './runtime.js',
+      }),
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        name: 'common.js',
+        minChunks: 2,
+        minSize: 0,
+      },
+      runtimeChunk: {
+        name: 'runtime.js'
+      },
+    },
+    mode: isProduction ? 'production' : 'none'
   };
 });
