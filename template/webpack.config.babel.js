@@ -18,6 +18,7 @@ const loaders = {
 }
 
 export default [
+  'plugin/index.js',
   'plugin/plugin.mina',
   'miniprogram/app.mina'
 ].map(entry => {
@@ -32,7 +33,8 @@ export default [
       path: dist,
       filename: '[name]',
       publicPath: '/',
-      globalObject: 'wx'
+      globalObject: 'wx',
+      libraryTarget: /\.js$/.test(entry) ? 'commonjs2' : 'var'
     },
     module: {
       rules: [
